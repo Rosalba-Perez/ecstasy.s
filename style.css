@@ -1,3 +1,9 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: "Jaldi", sans-serif;
     margin: 0;
@@ -9,7 +15,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #907cb8;
+    background-color: #ac8bc2;
     padding: 20px 30px;
 }
 
@@ -50,55 +56,63 @@ body {
     color: #ddd;
 }
 
-/* Carrusel Styles */
-.carousel-container {
-    position: relative;
+
+/* Estilo del Carrusel */
+.carrusel {
+    margin-top: 10px; 
     width: 100%;
-    max-width: 800px;
-    margin: 50px auto;
+    height: 500px;
+    background-color: #84458a;
     overflow: hidden;
-    background-color: #524866; 
-    border-radius: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.carousel {
+#contItemsCarrusel{
     display: flex;
-    transition: transform 0.5s ease-in-out;
-}
-
-.carousel-slide {
-    min-width: 100%;
-    transition: 0.5s;
-}
-
-.carousel-slide img {
+    height: 500px;
     width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 10px;
 }
 
-.prev, .next {
+.intemCarrusel{
+    height: 500px;
+    position: relative;
+}
+
+.tarjetaCarrusel{
+    background-color: rgb(122, 211, 181);
+    height: 100%;
+}
+
+.flechasC{
+    background-color: rgb(65, 71, 197, 0.3);
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    border: none;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+#tarjetaCarrusel-1{
+    background-color: #ac8bc2;
+}
+#tarjetaCarrusel-2{
+    background-color: #8ba9c2;
+}
+#tarjetaCarrusel-3{
+    background-color: #8bc2c2;
+}
+
+a{
+    text-decoration: none;
+}
+
+i{
     color: white;
-    padding: 10px;
-    cursor: pointer;
-    border-radius: 50%;
 }
 
-.prev {
-    left: 10px;
-}
-
-.next {
-    right: 10px;
-}
-
-.prev:hover, .next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
+img{
+    width: 100%;
+    height: 100%;
 }

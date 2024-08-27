@@ -33,45 +33,54 @@
 
 
     <!-- Carrusel de Anuncios -->
-    <div class="carousel-container">
-        <div class="carousel">
-            <div class="carousel-slide">
-                <img src="https://i.pinimg.com/736x/a5/9d/a1/a59da15cb2849e6831ffb2e988eb2f9f.jpg" alt="Anuncio 1">
+    <div class="carrusel">
+        <div class="contItemsCarrusel">
+            <div class="intemCarrusel" id="itemC-1">
+                <div class="tarjetaCarrusel" id="tarjetaCarrusel-1">
+                    <img src="./img/uno.jpg" alt="anuncio-1">
+                </div>
+                <div class="flechasC">
+                    <a href="#itemC-3">
+                        <i class="ri-arrow-left-s-line"></i>
+                    </a>
+                    <a href="#itemC-2">
+                        <i class="ri-arrow-right-s-line"></i>
+                    </a>
+                </div>
+
             </div>
-            <div class="carousel-slide">
-                <img src="anuncio2.jpg" alt="Anuncio 2">
+
+            <div class="intemCarrusel" id="itemC-2">
+                <div class="tarjetaCarrusel" id="tarjetaCarrusel-2">
+                    <img src="./img/dos.jpg" alt="anuncio-2">
+                </div>
+                <div class="flechasC">
+                    <a href="#itemC-1">
+                        <i class="ri-arrow-left-s-line"></i>
+                    </a>
+                    <a href="#itemC-3">
+                        <i class="ri-arrow-right-s-line"></i>
+                    </a>
+                </div>
+
             </div>
-            <div class="carousel-slide">
-                <img src="anuncio3.jpg" alt="Anuncio 3">
-            </div>
-            <div class="carousel-slide">
-                <img src="anuncio4.jpg" alt="Anuncio 4">
+
+            <div class="intemCarrusel" id="itemC-3">
+                <div class="tarjetaCarrusel" id="tarjetaCarrusel-3">
+                    <img src="./img/tres.jpg" alt="anuncio-3">
+                </div>
+                <div class="flechasC">
+                    <a href="#itemC-2">
+                        <i class="ri-arrow-left-s-line"></i>
+                    </a>
+                    <a href="#itemC-1">
+                        <i class="ri-arrow-right-s-line"></i>
+                    </a>
+                </div>
+
             </div>
         </div>
-        <button class="prev"><i class="fas fa-chevron-left"></i></button>
-        <button class="next"><i class="fas fa-chevron-right"></i></button>
     </div>
-
-    <script>
-        const prev = document.querySelector('.prev');
-        const next = document.querySelector('.next');
-        const carousel = document.querySelector('.carousel');
-        let index = 0;
-
-        prev.addEventListener('click', () => {
-            if (index > 0) {
-                index--;
-                carousel.style.transform = `translateX(${-index * 100}%)`;
-            }
-        });
-
-        next.addEventListener('click', () => {
-            if (index < document.querySelectorAll('.carousel-slide').length - 1) {
-                index++;
-                carousel.style.transform = `translateX(${-index * 100}%)`;
-            }
-        });
-    </script>
 
 </body>
 </html>
