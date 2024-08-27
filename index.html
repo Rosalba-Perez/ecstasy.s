@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecstasy</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">
+            <a href="#"><img src="logo-ecstasy.png" alt="Logo"></a>
+        </div>
+        <div>
+            <ul class="nav-links">
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Colecciones</a></li>
+                <li><a href="#">Guía de tallas</a></li>
+                <li><a href="#">Nosotros</a></li>
+                <li><a href="#">Contáctanos</a></li>
+            </ul>        
+        </div>
+
+        <div class="nav-icons">
+            <a href="#"><i class="ri-search-line"></i></a> 
+            <a href="#"><i class="ri-shopping-cart-line"></i></a>
+            <a href="#"><i class="ri-heart-line"></i></a>
+            <a href="#"><i class="ri-user-3-line nav__login"></i></a>
+        </div>
+    </nav>
+
+
+    <!-- Carrusel de Anuncios -->
+    <div class="carousel-container">
+        <div class="carousel">
+            <div class="carousel-slide">
+                <img src="https://i.pinimg.com/736x/a5/9d/a1/a59da15cb2849e6831ffb2e988eb2f9f.jpg" alt="Anuncio 1">
+            </div>
+            <div class="carousel-slide">
+                <img src="anuncio2.jpg" alt="Anuncio 2">
+            </div>
+            <div class="carousel-slide">
+                <img src="anuncio3.jpg" alt="Anuncio 3">
+            </div>
+            <div class="carousel-slide">
+                <img src="anuncio4.jpg" alt="Anuncio 4">
+            </div>
+        </div>
+        <button class="prev"><i class="fas fa-chevron-left"></i></button>
+        <button class="next"><i class="fas fa-chevron-right"></i></button>
+    </div>
+
+    <script>
+        const prev = document.querySelector('.prev');
+        const next = document.querySelector('.next');
+        const carousel = document.querySelector('.carousel');
+        let index = 0;
+
+        prev.addEventListener('click', () => {
+            if (index > 0) {
+                index--;
+                carousel.style.transform = `translateX(${-index * 100}%)`;
+            }
+        });
+
+        next.addEventListener('click', () => {
+            if (index < document.querySelectorAll('.carousel-slide').length - 1) {
+                index++;
+                carousel.style.transform = `translateX(${-index * 100}%)`;
+            }
+        });
+    </script>
+
+</body>
+</html>
