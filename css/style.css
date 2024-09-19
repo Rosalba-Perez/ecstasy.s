@@ -78,6 +78,7 @@ body {
 .btn-primary  .btn-secondary{
   margin: 0 5px;
 }
+
 /* Media Queries para pantallas pequeñas */
 @media (max-width: 768px) {
   .product-actions {
