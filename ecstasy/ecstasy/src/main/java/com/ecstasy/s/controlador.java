@@ -9,20 +9,25 @@ import lombok.extern.slf4j.Slf4j;
 @Controller
 @Slf4j
 public class controlador {
-    
-    @GetMapping("/")
-    public String index() {
-        return "index";
-    }
 
     @GetMapping("/colecciones")
     public String colecciones(){
         return "colecciones";
     }
 
+    @GetMapping("/contactanos")
+    public String contacto() {
+        return "contacto";
+    }
+
     @GetMapping("/guia_de_tallas")
     public String guiatallas() {
-        return "guia_tallas";
+        return "guiatallas";
+    }
+    
+    @GetMapping("/")
+    public String index() {
+        return "index";
     }
 
     @GetMapping("/nosotros")
@@ -30,9 +35,4 @@ public class controlador {
         return "nosotros";
     }
 
-    @GetMapping("/contactanos")
-    public String contacto() {
-        return "contactanos";
-    }
-    
 }
