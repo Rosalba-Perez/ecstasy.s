@@ -12,4 +12,25 @@ public class controlador {
     public String index(){
         return "index";
     }
+
+    @GetMapping("/colecciones")
+    public String colecciones(){
+        return "colecciones";
+    }
+
+    @GetMapping("/guiatallas")
+    public String guiatallas(){
+        return "guiatallas";
+    }
+
+    @GetMapping("/nosotros")
+    public String nosotros(){
+        return "nosotros";
+    }
+
+    @GetMapping("/contactanos")
+    public String contacto(){
+        return "contacto";
+    }
+
 }
